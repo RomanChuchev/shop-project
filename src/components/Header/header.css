@@ -1,0 +1,15 @@
+.navbar {
+  padding: 0;
+}
+
+.btn-header {
+  border-radius: 0.25rem;
+  transition: 0.2s linear;
+  margin-right: 3rem;
+}
+.btn {
+  padding: 0.125rem 0.4rem;
+}
+.lead {
+  margin: 0.5rem;
+}

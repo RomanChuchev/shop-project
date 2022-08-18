@@ -1,3 +1,5 @@
+import "./cart.css";
+
 function Cart(props) {
   const { quantity = 0 } = props;
 

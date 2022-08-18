@@ -1,0 +1,15 @@
+.cart {
+  position: fixed;
+  top: 0.4rem;
+  right: 1rem;
+
+  cursor: pointer;
+  z-index: 5;
+  padding: 0;
+}
+
+.cart-quantity {
+  font-size: xx-small;
+  color: black;
+  font-weight: 600;
+}

@@ -1,3 +1,5 @@
+import "./footer.css";
+
 function Footer() {
   return (
     <footer className="bg-dark text-start text-white">
@@ -7,7 +9,7 @@ function Footer() {
             © {new Date().getFullYear()} Copyright Text
           </div>
           <a
-            className="btn btn-outline-light btn-floating m-1 position-absolute top-0 end-0"
+            className="btn btn-outline-light btn-floating btn-footer m-1 position-absolute top-0 end-0"
             target="_blank"
             rel="noreferrer"
             href="https://github.com/RomanChuchev/movies-project"

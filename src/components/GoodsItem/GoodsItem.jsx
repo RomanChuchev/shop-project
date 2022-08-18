@@ -1,10 +1,12 @@
+import "./goodsItem.css";
+
 function GoodsItem(props) {
   const {
     id,
     name,
     price,
     description,
-    images: { full_background },
+    full_background,
     addToBusket = Function.prototype,
   } = props;
   return (
@@ -15,9 +17,10 @@ function GoodsItem(props) {
         <h5 className="card-text small">{description}</h5>
         <button
           className="btn btn-dark"
+          style={{ fontSize: "x-small" }}
           onClick={() => addToBusket({ id, name, price })}
         >
-          Купить
+          В корзину
         </button>
       </div>
     </div>

@@ -1,4 +1,5 @@
-import { GoodsItem } from "./GoodsItem";
+import GoodsItem from "../GoodsItem";
+import "./goodsList.css";
 
 function GoodsList({ goods = [], addToBusket = Function.prototype }) {
   if (!goods.length) {
