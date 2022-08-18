@@ -5,6 +5,7 @@ function Header() {
         <h1 className="lead" href="#">
           React Shop
         </h1>
+
         <a
           className="btn btn-outline-light btn-header btn-sm"
           rel="noreferrer"

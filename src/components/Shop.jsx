@@ -3,10 +3,21 @@ import { API_KEY, API_URL } from "../config";
 
 import { Prelouder } from "./Preloader";
 import { GoodsList } from "./GoodsList";
+import { Cart } from "./Cart";
 
 function Shop() {
   const [goods, setGoods] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [order, setOrder] = useState(true);
+
+  const addToBusket = (item) => {
+    console.log("Добавить в корзину", item);
+    const newItem = {
+      ...item,
+      quantity: 1,
+    };
+    // setOrder([...order, item]);
+  };
 
   useEffect(function getGoods() {
     fetch(API_URL, {
@@ -20,7 +31,12 @@ function Shop() {
   }, []);
   return (
     <main className="container content">
-      {loading ? <Prelouder /> : <GoodsList goods={goods} />}
+      <Cart quantity={order.length} />
+      {loading ? (
+        <Prelouder />
+      ) : (
+        <GoodsList goods={goods} addToBusket={addToBusket} />
+      )}
     </main>
   );
 }

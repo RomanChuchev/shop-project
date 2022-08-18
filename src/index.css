@@ -35,9 +35,14 @@ body {
   box-shadow: 0 0 2px rgb(111 66 193 / 90%), 0 0 4px rgb(111 66 193 / 40%),
     0 0 1rem rgb(111 66 193 / 30%), 0 0 4rem rgb(111 66 193 / 10%);
 }
+
 .card:hover {
   box-shadow: 0 0 8px rgb(111 66 193 / 90%), 0 0 16px rgb(111 66 193 / 40%),
     0 0 4rem rgb(111 66 193 / 30%), 0 0 16rem rgb(111 66 193 / 10%);
+}
+
+.card-body {
+  padding: 0.5rem;
 }
 
 .btn-outline-light {
@@ -51,10 +56,37 @@ body {
 .btn-header {
   border-radius: 0.25rem;
   transition: 0.2s linear;
+  margin-right: 3rem;
 }
 
 .sky {
   text-shadow: 0 0 1px rgb(50 251 226 / 60%), 0 0 3px rgb(50 251 226 / 50%),
     0 0 0.5rem rgb(50 251 226 / 30%), 0 0 2rem rgb(50 251 226 / 20%);
   color: #32fbe2;
+}
+
+.cart {
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+
+  cursor: pointer;
+  z-index: 5;
+  padding: 0;
+}
+
+@media (min-width: 600px) {
+  .cart {
+    top: 0.4rem;
+    bottom: unset;
+  }
+  .content {
+    padding: 1rem 2rem;
+  }
+}
+
+.cart-quantity {
+  font-size: xx-small;
+  color: black;
+  font-weight: 600;
 }
