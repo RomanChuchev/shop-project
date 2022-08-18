@@ -1,0 +1,27 @@
+.order {
+  border: 1px solid black;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.list-group-item-action {
+  --bs-list-group-action-active-bg: #b788fd;
+  --bs-list-group-active-bg: #b788fd;
+  --bs-list-group-active-border-color: #b788fd;
+  --bs-list-group-action-color: #b788fd;
+  --bs-list-group-action-active-color: #b788fd;
+  --bs-list-group-action-hover-bg: #b788fd;
+  --bs-list-group-bg: #be9eee;
+  padding: 0 20px;
+}
+
+.delete {
+  cursor: pointer;
+  transition: 0.3s;
+  color: red;
+}
+
+.delete:hover {
+  transform: scale(1.3);
+}
