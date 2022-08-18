@@ -14,7 +14,7 @@ function Shop() {
     })
       .then((response) => response.json())
       .then((data) => {
-        data.featured && setGoods(data.featured);
+        data.shop[0].granted && setGoods(data.shop[0].granted);
         setLoading(false);
       });
   }, []);

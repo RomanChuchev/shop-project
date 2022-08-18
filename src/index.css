@@ -9,8 +9,8 @@ body {
   padding: 0;
 }
 
-.navbar-brand {
-  padding-bottom: 0;
+.lead {
+  margin: 0.5rem;
 }
 
 .content {
@@ -28,6 +28,18 @@ body {
   box-shadow: 0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 12%),
     0 8px 10px -7px rgb(0 0 0 / 20%);
 }
+
+.card {
+  border: 2px solid black;
+  background: #6f42c1;
+  box-shadow: 0 0 2px rgb(111 66 193 / 90%), 0 0 4px rgb(111 66 193 / 40%),
+    0 0 1rem rgb(111 66 193 / 30%), 0 0 4rem rgb(111 66 193 / 10%);
+}
+.card:hover {
+  box-shadow: 0 0 8px rgb(111 66 193 / 90%), 0 0 16px rgb(111 66 193 / 40%),
+    0 0 4rem rgb(111 66 193 / 30%), 0 0 16rem rgb(111 66 193 / 10%);
+}
+
 .btn-outline-light {
   border-radius: 50%;
 }
@@ -39,4 +51,10 @@ body {
 .btn-header {
   border-radius: 0.25rem;
   transition: 0.2s linear;
+}
+
+.sky {
+  text-shadow: 0 0 1px rgb(50 251 226 / 60%), 0 0 3px rgb(50 251 226 / 50%),
+    0 0 0.5rem rgb(50 251 226 / 30%), 0 0 2rem rgb(50 251 226 / 20%);
+  color: #32fbe2;
 }

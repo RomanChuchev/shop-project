@@ -1,8 +1,8 @@
 function Header() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div className="container-fluid">
-        <h1 className="navbar-brand" href="#">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary ">
+      <div className="container-fluid ">
+        <h1 className="lead" href="#">
           React Shop
         </h1>
         <a
