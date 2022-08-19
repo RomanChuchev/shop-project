@@ -1,7 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+import { ShopContext } from "../../context";
 import "./alertBye.css";
 
-function AlertBye({ name = "", closeAlertBye = Function.prototype }) {
+function AlertBye() {
+  const { name = "", closeAlertBye = Function.prototype } =
+    useContext(ShopContext);
+
   useEffect(() => {
     const timerId = setTimeout(() => closeAlertBye(), 3000);
 

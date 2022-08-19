@@ -1,7 +1,11 @@
+import { useContext } from "react";
+import { ShopContext } from "../../context";
 import GoodsItem from "../GoodsItem";
 import "./goodsList.css";
 
-function GoodsList({ goods = [], addToBusket = Function.prototype }) {
+function GoodsList() {
+  const { goods = [] } = useContext(ShopContext);
+
   if (!goods.length) {
     return <h3>Nothing here</h3>;
   }
@@ -9,7 +13,7 @@ function GoodsList({ goods = [], addToBusket = Function.prototype }) {
   return (
     <div className="goods">
       {goods.map((item) => {
-        return <GoodsItem key={item.id} {...item} addToBusket={addToBusket} />;
+        return <GoodsItem key={item.id} {...item} />;
       })}
     </div>
   );

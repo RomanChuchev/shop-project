@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { ShopContext } from "../../context";
 import "./alert.css";
 
-function Alert({ name = "", closeAlert = Function.prototype }) {
+function Alert() {
+  const { alertName: name = "", closeAlert = Function.prototype } =
+    useContext(ShopContext);
+
   const [classes, setClasses] = useState(
     "alert alert-dismissible alert-success alert-position text-light"
   );

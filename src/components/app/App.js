@@ -3,12 +3,15 @@ import Footer from "../Footer";
 import Shop from "../Shop";
 import "./app.css";
 import "../bootstrap.min.css";
+import { ContextProvider } from "../../context";
 
 function App() {
   return (
     <>
       <Header />
-      <Shop />
+      <ContextProvider>
+        <Shop />
+      </ContextProvider>
       <Footer />
     </>
   );
