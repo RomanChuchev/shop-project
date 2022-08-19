@@ -12,7 +12,7 @@ function Footer() {
             className="btn btn-outline-light btn-floating btn-footer m-1 position-absolute top-0 end-0"
             target="_blank"
             rel="noreferrer"
-            href="https://github.com/RomanChuchev/movies-project"
+            href="https://github.com/RomanChuchev/shop-project"
             role="button"
           >
             <i className="fab fa-github"></i>

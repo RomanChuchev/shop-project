@@ -12,7 +12,7 @@ function Header() {
           className="btn btn-outline-light btn-header btn-sm"
           rel="noreferrer"
           target="_blank"
-          href="https://github.com/RomanChuchev"
+          href="https://github.com/RomanChuchev/shop-project"
           role="button"
         >
           Repo
