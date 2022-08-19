@@ -18,6 +18,8 @@
   text-shadow: 0 0 1px rgb(50 251 226 / 30%), 0 0 2px rgb(50 251 226 / 30%),
     0 0 5px rgb(50 251 226 / 20%);
   --bs-list-group-bg: #be9eee;
+
+  animation: show 600ms ease-in-out;
 }
 .flex {
   display: flex;
@@ -50,3 +52,14 @@
     0 0 0.5rem rgb(50 251 226 / 30%), 0 0 2rem rgb(50 251 226 / 20%);
   --bs-list-group-action-hover-color: #32fbe2;
 }
+
+@keyframes show {
+  from {
+    top: 30%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+} ;

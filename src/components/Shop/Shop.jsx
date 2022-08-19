@@ -37,6 +37,38 @@ function Shop() {
     }
   };
 
+  const removeFromBasket = (itemId) => {
+    const newOrder = order.filter((el) => el.id !== itemId);
+    setOrder(newOrder);
+  };
+
+  const plusQuantity = (itemId) => {
+    const newOrder = order.map((el) => {
+      if (el.id === itemId) {
+        return {
+          ...el,
+          quantity: el.quantity + 1,
+        };
+      } else {
+        return el;
+      }
+    });
+    setOrder(newOrder);
+  };
+  const minusQuantity = (itemId) => {
+    const newOrder = order.map((el) => {
+      if (el.id === itemId && el.quantity > 0) {
+        return {
+          ...el,
+          quantity: el.quantity - 1,
+        };
+      } else {
+        return el;
+      }
+    });
+    setOrder(newOrder);
+  };
+
   const handleBasketShow = () => {
     setBasketShow(!isBasketShow);
   };
@@ -56,7 +88,13 @@ function Shop() {
     <main className="container content">
       <Cart quantity={order.length} handleBasketShow={handleBasketShow} />
       {isBasketShow ? (
-        <BasketList order={order} handleBasketShow={handleBasketShow} />
+        <BasketList
+          order={order}
+          handleBasketShow={handleBasketShow}
+          removeFromBasket={removeFromBasket}
+          plusQuantity={plusQuantity}
+          minusQuantity={minusQuantity}
+        />
       ) : null}
       {loading ? (
         <Prelouder />

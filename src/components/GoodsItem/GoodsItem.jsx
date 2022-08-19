@@ -6,6 +6,7 @@ function GoodsItem(props) {
     name,
     price,
     description,
+    icon,
     full_background,
     addToBusket = Function.prototype,
   } = props;
@@ -18,7 +19,7 @@ function GoodsItem(props) {
         <button
           className="btn btn-dark"
           style={{ fontSize: "x-small" }}
-          onClick={() => addToBusket({ id, name, price })}
+          onClick={() => addToBusket({ id, name, price, icon })}
         >
           В корзину
         </button>

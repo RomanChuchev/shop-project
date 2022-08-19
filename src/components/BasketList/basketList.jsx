@@ -1,7 +1,14 @@
 import { BasketItem } from "../BasketItem/basketItem";
 import "./basketList.css";
 
-function BasketList({ order = [], handleBasketShow = Function.prototype }) {
+function BasketList(props) {
+  const {
+    order = [],
+    handleBasketShow = Function.prototype,
+    removeFromBasket = Function.prototype,
+    minusQuantity = Function.prototype,
+    plusQuantity = Function.prototype,
+  } = props;
   const totalPrice = order.reduce((sum, el) => sum + el.price * el.quantity, 0);
 
   return (
@@ -14,16 +21,26 @@ function BasketList({ order = [], handleBasketShow = Function.prototype }) {
       </li>
 
       {order.length ? (
-        order.map((item) => <BasketItem key={item.id} {...item} />)
+        order.map((item) => (
+          <BasketItem
+            key={item.id}
+            removeFromBasket={removeFromBasket}
+            minusQuantity={minusQuantity}
+            plusQuantity={plusQuantity}
+            {...item}
+          />
+        ))
       ) : (
-        <li className="list-group-item list-group-item-action">
+        <li className="list-group-item list-group-item-action text-center">
           Корзина пуста
         </li>
       )}
-      <li className="list-group-item list-group-item-action bg-primary">
-        Общая стоимость: <span className="text-white">{totalPrice}</span>{" "}
-        <i className="fas fa-coins small text-warning"></i>
-      </li>
+      {order.length ? (
+        <li className="list-group-item list-group-item-action bg-primary">
+          Общая стоимость: <span className="text-white">{totalPrice}</span>{" "}
+          <i className="fas fa-coins small text-warning"></i>
+        </li>
+      ) : null}
     </ul>
   );
 }
