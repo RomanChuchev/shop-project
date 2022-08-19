@@ -1,21 +1,19 @@
 .alert-bye-position {
-  border-radius: 10px;
   position: fixed;
-  top: 10%;
-  right: 25%;
-  padding: 20px 40px;
-
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
   z-index: 5;
+  display: inline-block;
+  border: 2px solid black;
+  width: 20rem;
+  max-width: 95%;
+
+  text-align: center;
+  padding: 20px 0;
+
   animation: showAlert 1000ms ease-in-out;
-
-  opacity: 1;
-  transition: opacity 1s, visibility 0s;
-}
-
-.hidden {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s, visibility 0s 1s;
 }
 
 @keyframes showAlert {
@@ -27,4 +25,4 @@
     top: 30%;
     opacity: 1;
   }
-} ;
+}

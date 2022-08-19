@@ -1,0 +1,249 @@
+body {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.alert-position {
+  border-radius: 10px;
+  position: fixed;
+  top: 0.5rem;
+  right: 3.5rem;
+  background: #1682c5;
+
+  z-index: 5;
+  padding: 5px 40px 5px 20px;
+  animation: show 600ms ease-in-out;
+
+  opacity: 1;
+  transition: opacity 1s, visibility 0s;
+}
+
+.btn-close {
+  padding: 0.6rem !important;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s, visibility 0s 1s;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    right: 2rem;
+  }
+  to {
+    right: 3.5rem;
+
+    opacity: 1;
+  }
+}
+
+.alert-bye-position {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  z-index: 5;
+  display: inline-block;
+  border: 2px solid black;
+  width: 20rem;
+  max-width: 95%;
+
+  text-align: center;
+  padding: 20px 0;
+
+  animation: showAlert 1000ms ease-out;
+}
+
+@keyframes showAlert {
+  from {
+    opacity: 0;
+    top: 50%;
+  }
+  to {
+    top: 20%;
+    opacity: 1;
+  }
+}
+
+.order {
+  border: 1px solid black;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.list-group-item-action {
+  --bs-list-group-action-active-bg: #b788fd;
+  --bs-list-group-active-bg: #b788fd;
+  --bs-list-group-active-border-color: #b788fd;
+  --bs-list-group-action-color: #b788fd;
+  --bs-list-group-action-active-color: #b788fd;
+  --bs-list-group-action-hover-bg: #b788fd;
+  --bs-list-group-bg: #be9eee;
+  padding: 0 10px;
+}
+
+.delete {
+  cursor: pointer;
+  transition: 0.3s;
+  color: red;
+}
+
+.delete:hover {
+  transform: scale(1.3);
+}
+
+.margin-right {
+  margin-right: 0.5rem;
+}
+
+.border-item {
+  border-bottom: 1px solid black;
+}
+
+.basket-list {
+  background: #000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  z-index: 5;
+  display: inline-block;
+  border: 2px solid black;
+
+  width: 40rem;
+  max-width: 95%;
+  text-shadow: 0 0 1px rgb(50 251 226 / 30%), 0 0 2px rgb(50 251 226 / 30%),
+    0 0 5px rgb(50 251 226 / 20%);
+  --bs-list-group-bg: #be9eee;
+
+  animation: showBusket 600ms ease-in-out;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.close {
+  padding-right: 5px;
+  line-height: 0.8em;
+  font-weight: 400;
+
+  font-size: 2em;
+  height: 22.5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close:hover {
+  line-height: 0.7em;
+  color: red;
+  font-weight: 900;
+  transform: scale(1.2);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 0 2px rgba(135, 74, 74, 0.3),
+    0 0 5px rgba(255, 0, 0, 0.2);
+}
+.bg-primary {
+  color: #32fbe2;
+  text-align: start !important;
+  font-size: large;
+  text-shadow: 0 0 1px rgb(50 251 226 / 60%), 0 0 3px rgb(50 251 226 / 50%),
+    0 0 0.5rem rgb(50 251 226 / 30%), 0 0 2rem rgb(50 251 226 / 20%);
+  --bs-list-group-action-hover-color: #32fbe2;
+}
+
+.checkout {
+  margin-top: 3px;
+  margin-right: 2rem;
+  font-size: 0.8rem;
+  height: 1.5rem;
+}
+
+@keyframes showBusket {
+  from {
+    top: 30%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+.cart {
+  position: fixed;
+  top: 0.6rem;
+  right: 1rem;
+
+  cursor: pointer;
+  z-index: 5;
+  padding: 0;
+}
+
+.cart-quantity {
+  font-size: xx-small;
+  color: black;
+  font-weight: 600;
+}
+
+.btn-footer {
+  border-radius: 50%;
+}
+
+.card {
+  border: 2px solid black;
+  background: #6f42c1;
+  box-shadow: 0 0 2px rgb(111 66 193 / 90%), 0 0 4px rgb(111 66 193 / 40%),
+    0 0 1rem rgb(111 66 193 / 30%), 0 0 4rem rgb(111 66 193 / 10%);
+}
+
+.card:hover {
+  box-shadow: 0 0 8px rgb(111 66 193 / 90%), 0 0 16px rgb(111 66 193 / 40%),
+    0 0 4rem rgb(111 66 193 / 30%), 0 0 16rem rgb(111 66 193 / 10%);
+}
+
+.card-body {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.goods {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.goods:hover {
+  box-shadow: 0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 12%),
+    0 8px 10px -7px rgb(0 0 0 / 20%);
+}
+
+.navbar {
+  padding: 0;
+}
+
+.btn-header {
+  border-radius: 0.25rem;
+  transition: 0.2s linear;
+  margin-right: 3rem;
+}
+.btn {
+  padding: 0.125rem 0.4rem;
+}
+.lead {
+  font-size: 2rem;
+  margin-left: 1.5rem;
+}
+
+.content {
+  min-height: calc(100vh - 42px - 50px);
+  padding: 1rem 0;
+}

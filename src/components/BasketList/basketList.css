@@ -19,7 +19,7 @@
     0 0 5px rgb(50 251 226 / 20%);
   --bs-list-group-bg: #be9eee;
 
-  animation: show 600ms ease-in-out;
+  animation: showBusket 600ms ease-in-out;
 }
 .flex {
   display: flex;
@@ -60,7 +60,7 @@
   height: 1.5rem;
 }
 
-@keyframes show {
+@keyframes showBusket {
   from {
     top: 30%;
     opacity: 0;

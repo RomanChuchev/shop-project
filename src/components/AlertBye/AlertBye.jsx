@@ -11,7 +11,7 @@ function AlertBye({ name = "", closeAlertBye = Function.prototype }) {
   }, [name, closeAlertBye]);
 
   return (
-    <div className="alert alert-dismissible alert-success alert-bye-position text-light">
+    <div className="alert alert-dismissible alert-success alert-bye-position text-black">
       <font style={{ verticalAlign: "inherit" }}>
         <font style={{ verticalAlign: "inherit" }}>
           <strong>Товары успешно оплачены!</strong>{" "}
