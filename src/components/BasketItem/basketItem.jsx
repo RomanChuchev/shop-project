@@ -24,15 +24,25 @@ function BasketItem(props) {
         <i className="fas fa-coins small text-warning"></i>{" "}
         <i className="fas fa-times m-2 text-white"></i>{" "}
         <span>
-          <button className="btn btn-info " onClick={() => minusQuantity(id)}>
-            <i className="fas fa-minus small text-primary"></i>
+          <button
+            className="btn btn-primary btn-inc-dec"
+            onClick={() => minusQuantity(id)}
+          >
+            <i className="fas fa-minus small"></i>
           </button>
-          <button className="btn btn-primary"> {quantity}</button>
-          <button className="btn btn-info" onClick={() => plusQuantity(id)}>
-            <i className="fas fa-plus small text-primary"></i>
+          <button className="btn btn-dark btn-inc-dec">
+            {" "}
+            <strong>{quantity}</strong>{" "}
+          </button>
+          <button
+            className="btn btn-primary btn-inc-dec"
+            onClick={() => plusQuantity(id)}
+          >
+            <i className="fas fa-plus small "></i>
           </button>
         </span>{" "}
-        <i className="fas fa-equals m-2 text-white"></i> {quantity * price}{" "}
+        <i className="fas fa-equals m-2 text-white"></i>{" "}
+        <strong>{quantity * price}</strong>{" "}
         <i className="fas fa-coins small text-warning"></i>{" "}
       </div>
       <i

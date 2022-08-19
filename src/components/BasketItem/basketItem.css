@@ -29,3 +29,9 @@
 .margin-right {
   margin-right: 0.5rem;
 }
+
+.btn-inc-dec {
+  line-height: 5px;
+  height: 1.5rem;
+  min-width: 1.5rem;
+}

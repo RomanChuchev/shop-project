@@ -42,7 +42,7 @@ function BasketList(props) {
             Общая стоимость: <span className="text-white">{totalPrice}</span>{" "}
             <i className="fas fa-coins small text-warning"></i>
           </span>
-          <button className="btn btn-dark checkout" onClick={clearGoods}>
+          <button className="btn btn-info checkout" onClick={clearGoods}>
             Оформить заказ <i className="fas fa-wallet small text-warning"></i>
           </button>
         </li>

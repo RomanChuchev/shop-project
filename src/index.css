@@ -247,3 +247,9 @@ body {
   min-height: calc(100vh - 104px);
   padding: 1rem 0;
 }
+
+.btn-inc-dec {
+  line-height: 5px;
+  height: 1.5rem;
+  min-width: 1.5rem;
+}
