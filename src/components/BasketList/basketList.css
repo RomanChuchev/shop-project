@@ -53,6 +53,13 @@
   --bs-list-group-action-hover-color: #32fbe2;
 }
 
+.checkout {
+  margin-top: 3px;
+  margin-right: 2rem;
+  font-size: 0.8rem;
+  height: 1.5rem;
+}
+
 @keyframes show {
   from {
     top: 30%;

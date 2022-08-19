@@ -8,6 +8,7 @@ function BasketList(props) {
     removeFromBasket = Function.prototype,
     minusQuantity = Function.prototype,
     plusQuantity = Function.prototype,
+    clearGoods = Function.prototype,
   } = props;
   const totalPrice = order.reduce((sum, el) => sum + el.price * el.quantity, 0);
 
@@ -36,9 +37,14 @@ function BasketList(props) {
         </li>
       )}
       {order.length ? (
-        <li className="list-group-item list-group-item-action bg-primary">
-          Общая стоимость: <span className="text-white">{totalPrice}</span>{" "}
-          <i className="fas fa-coins small text-warning"></i>
+        <li className="flex list-group-item list-group-item-action bg-primary">
+          <span>
+            Общая стоимость: <span className="text-white">{totalPrice}</span>{" "}
+            <i className="fas fa-coins small text-warning"></i>
+          </span>
+          <button className="btn btn-dark checkout" onClick={clearGoods}>
+            Оформить заказ <i className="fas fa-wallet small text-warning"></i>
+          </button>
         </li>
       ) : null}
     </ul>

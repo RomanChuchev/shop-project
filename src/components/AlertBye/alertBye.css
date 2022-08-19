@@ -1,0 +1,30 @@
+.alert-bye-position {
+  border-radius: 10px;
+  position: fixed;
+  top: 10%;
+  right: 25%;
+  padding: 20px 40px;
+
+  z-index: 5;
+  animation: showAlert 1000ms ease-in-out;
+
+  opacity: 1;
+  transition: opacity 1s, visibility 0s;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s, visibility 0s 1s;
+}
+
+@keyframes showAlert {
+  from {
+    opacity: 0;
+    top: 50%;
+  }
+  to {
+    top: 30%;
+    opacity: 1;
+  }
+} ;
