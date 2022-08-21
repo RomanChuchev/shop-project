@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ShopContext } from "../../context";
 import "./basketItem.css";
 
@@ -7,6 +7,13 @@ function BasketItem(props) {
 
   const { removeFromBasket, minusQuantity, plusQuantity } =
     useContext(ShopContext);
+
+  useEffect(() => {
+    if (quantity === 0) {
+      removeFromBasket(id);
+    }
+    // eslint-disable-next-line
+  }, [quantity]);
 
   return (
     <li className="list-group-item list-group-item-action text-dark flex order small">

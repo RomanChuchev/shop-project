@@ -11,6 +11,7 @@ function GoodsItem(props) {
     minusQuantity,
     plusQuantity,
     order = [],
+    removeFromBasket,
   } = useContext(ShopContext);
 
   const quantity = order
@@ -28,7 +29,11 @@ function GoodsItem(props) {
 
     if (quantity > 0) {
       setIsAdd(true);
-    } else setIsAdd(false);
+    } else {
+      removeFromBasket(id);
+      setIsAdd(false);
+    }
+    // eslint-disable-next-line
   }, [quantity]);
 
   return (
