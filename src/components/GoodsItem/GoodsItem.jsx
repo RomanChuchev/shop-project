@@ -1,11 +1,35 @@
-import { useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { ShopContext } from "../../context";
 import "./goodsItem.css";
 
 function GoodsItem(props) {
   const { id, name, price, description, icon, full_background } = props;
 
-  const { addToBusket } = useContext(ShopContext);
+  const [isAdd, setIsAdd] = useState(false);
+  const {
+    addToBusket,
+    minusQuantity,
+    plusQuantity,
+    order = [],
+  } = useContext(ShopContext);
+
+  const quantity = order
+    .map((el) => {
+      if (el.id === id) {
+        return el.quantity;
+      } else {
+        return null;
+      }
+    })
+    .join("");
+
+  useEffect(() => {
+    console.log(quantity);
+
+    if (quantity > 0) {
+      setIsAdd(true);
+    } else setIsAdd(false);
+  }, [quantity]);
 
   return (
     <div className="card" style={{ width: "auto" }}>
@@ -13,13 +37,40 @@ function GoodsItem(props) {
 
       <div className="card-body text-center">
         <h5 className="card-text small">{description}</h5>
-        <button
-          className="btn btn-dark"
-          style={{ fontSize: "x-small" }}
-          onClick={() => addToBusket({ id, name, price, icon })}
-        >
-          В корзину
-        </button>
+        {isAdd ? (
+          <span>
+            <button
+              className="btn btn-dark btn-inc-dec"
+              onClick={() => {
+                minusQuantity(id);
+              }}
+            >
+              <i className="fas fa-minus small"></i>
+            </button>
+            <button className="btn btn-light btn-inc-dec text-dark">
+              {" "}
+              <strong>{quantity}</strong>
+            </button>
+            <button
+              className="btn btn-dark btn-inc-dec"
+              onClick={() => {
+                plusQuantity(id);
+              }}
+            >
+              <i className="fas fa-plus small "></i>
+            </button>
+          </span>
+        ) : (
+          <button
+            className="btn btn-dark"
+            style={{ fontSize: "x-small" }}
+            onClick={() => {
+              addToBusket({ id, name, price, icon });
+            }}
+          >
+            В корзину
+          </button>
+        )}
       </div>
     </div>
   );
