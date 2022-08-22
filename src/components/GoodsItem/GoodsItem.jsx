@@ -25,8 +25,6 @@ function GoodsItem(props) {
     .join("");
 
   useEffect(() => {
-    console.log(quantity);
-
     if (quantity > 0) {
       setIsAdd(true);
     } else {
